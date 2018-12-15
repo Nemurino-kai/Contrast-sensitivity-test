@@ -1,5 +1,6 @@
-﻿
 # include <Siv3D.hpp>
+# define OPTIC_ANGLE 3.951
+//ウィンドウの大きさに対応する視角の大きさ
 
 void Main()
 {
@@ -31,9 +32,8 @@ void Main()
 		if (Input::MouseR.pressed) cont += 1.0;
 		cont = Clamp(cont, 0.0, 127.0);
 		
-		tex.fill(mono);
-		gui.text(L"text").text = Format(L"波数:", nami,L"コントラスト:", cont*2,L"周波数",1.0/3.951*nami);
-		//3.951は画面の大きさに対応する視角の大きさ
+		tex.fill(	mono);
+		gui.text(L"text").text = Format(L"波数:", nami,L"コントラスト:", cont*2,L"周波数",1.0/OPTIC_ANGLE*nami);
 		tex.draw();
 	}
 }
