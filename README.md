@@ -1,5 +1,6 @@
 # Contrast-sensitivity-test
 本プログラムは、コントラスト感度を測定するための補助ツールです。
+[こちらのリンク](https://github.com/Nemurino-kai/Contrast-sensitivity-test/releases/download/Initial/Contrast-sensitivity-test.exe)より、ダウンロードできます。
 
 開発エンジン:Siv3d(August2016v2)<br>
 使用エディタ:Visual Studio 2015
