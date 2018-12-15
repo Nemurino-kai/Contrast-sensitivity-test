@@ -10,14 +10,8 @@ void Main()
 
 	Image mono(640, 480);
 	DynamicTexture tex;
-	for (int i = 0; i < 640; i++) {
-		for (int j = 0; j < 480; j++) {
-			mono[j][i] = Color(255,255,255);
-		}
-	}
 	int nami = 1;
 	double cont = 127.0;
-	tex = DynamicTexture(mono);
 	while (System::Update())
 	{
 		for (int i = 0; i < 640; i++) {
@@ -32,7 +26,7 @@ void Main()
 		if (Input::MouseR.pressed) cont += 1.0;
 		cont = Clamp(cont, 0.0, 127.0);
 		
-		tex.fill(	mono);
+		tex.fill(mono);
 		gui.text(L"text").text = Format(L"波数:", nami,L"コントラスト:", cont*2,L"周波数",1.0/OPTIC_ANGLE*nami);
 		tex.draw();
 	}
