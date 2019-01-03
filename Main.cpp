@@ -1,6 +1,7 @@
 # include <Siv3D.hpp>
 # define OPTIC_ANGLE 3.951
 //ウィンドウの大きさに対応する視角の大きさ
+//made by Kohei Tashiro
 
 void Main()
 {
